@@ -1,0 +1,18 @@
+dependencies:
+  button:
+    public: true
+    version: ^2
+  esp_codec_dev:
+    public: true
+    version: ^1
+  esp_lvgl_port:
+    public: true
+    version: ^1
+  idf:
+    version: '>=5.0'
+description: Board Support Package for Adafruit ESP32-S3 TFT Feather
+targets:
+- esp32s3
+maintainers: Hesian Zhou <mail@hessian.cn>
+url: https://hessian.cn/
+version: 1.0.2
