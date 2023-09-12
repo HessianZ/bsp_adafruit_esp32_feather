@@ -84,6 +84,10 @@ static esp_err_t bsp_display_brightness_init(void)
         .timer_sel = 0,
         .duty = 0,
         .hpoint = 0
+        .hpoint = 0,
+        .flags = {
+            .output_invert = true
+        }
     };
     const ledc_timer_config_t LCD_backlight_timer = {
         .speed_mode = LEDC_LOW_SPEED_MODE,
@@ -124,6 +128,7 @@ esp_err_t bsp_display_backlight_off(void)
 esp_err_t bsp_display_backlight_on(void)
 {
     return bsp_display_brightness_set(50);
+    return bsp_display_brightness_set(100);
 }
 
 esp_err_t bsp_display_new(const bsp_display_config_t *config, esp_lcd_panel_handle_t *ret_panel, esp_lcd_panel_io_handle_t *ret_io)
