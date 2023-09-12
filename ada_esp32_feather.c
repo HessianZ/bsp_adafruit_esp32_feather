@@ -83,7 +83,6 @@ static esp_err_t bsp_display_brightness_init(void)
         .intr_type = LEDC_INTR_DISABLE,
         .timer_sel = 0,
         .duty = 0,
-        .hpoint = 0
         .hpoint = 0,
         .flags = {
             .output_invert = true
