@@ -11,6 +11,11 @@ Configures of this component can be find in "menuconfig->Component config->Board
 
 ### Sample code
 ```c
+
+#include "bsp/tft-feather.h"
+
+void app_main(void)
+{
     // 初始化 NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -30,4 +35,5 @@ Configures of this component can be find in "menuconfig->Component config->Board
     
     // 启动LVGL UI绘制（自行实现）
     ESP_ERROR_CHECK(ui_main_start());
+}
 ```
